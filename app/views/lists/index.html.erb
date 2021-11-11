@@ -1,0 +1,8 @@
+<h1>index pages</h1>
+
+<% @lists.each do |list| %>
+  <%= link_to list.name, list_path(list.id) %>
+<% end %>
+
+<br>
+<%= link_to "create", new_list_path %>

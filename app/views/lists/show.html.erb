@@ -1,0 +1,15 @@
+<div class="container">
+<h1>show page - <%= @list.name%></h1>
+
+<% @list.bookmarks.each do |book| %>
+<div class="card">
+<h3><%= book.comment %></h3>
+<p><%= book.movie.title %></p>
+<%= image_tag(book.movie.poster_url, width: 100) %>
+<%= link_to "x", bookmark_path(book), method: :delete, data: { confirm: "Are you sure?" }%>
+</div>
+<% end %>
+
+<%= link_to "revenir a la homepage" , lists_path %>
+<%= link_to "bookmark", new_list_bookmark_path(@list) %>
+</div>

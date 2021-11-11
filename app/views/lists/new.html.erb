@@ -1,0 +1,7 @@
+<h1>New page (list)</h1>
+
+ <%= simple_form_for @list do |f| %>
+  <%= f.input :name, label: "name" %>
+  <%= f.submit 'create a list' %>
+  <% end %>
+<%= link_to "revenir a la homepage" , lists_path %>
